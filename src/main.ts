@@ -3,6 +3,9 @@ import { BrowserWindow, app } from 'electron';
 // @ts-expect-error -> In vite there are no types for the following line. Electron forge error
 import started from 'electron-squirrel-startup';
 
+import { updateElectronApp } from 'update-electron-app';
+updateElectronApp();
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
   app.quit();
